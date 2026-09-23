@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Controle de Processos</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/supabaseClient.js"></script>
+<script>
+(async () => {
+  const { data: { session } } = await supabaseClient.auth.getSession();
+  window.location.href = session ? "processos.html" : "login.html";
+})();
+</script>
+</body>
+</html>

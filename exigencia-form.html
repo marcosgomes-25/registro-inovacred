@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exigência · Controle de Processos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="navbar"></div>
+
+<div class="container-fluid px-4">
+  <div id="alertBox"></div>
+
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 id="tituloPagina">Nova exigência</h4>
+    <a href="#" class="btn btn-outline-secondary btn-sm" id="btnVoltar">Voltar</a>
+  </div>
+
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <form id="exigenciaForm" novalidate>
+        <input type="hidden" id="exigenciaId">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">Data da exigência</label>
+            <input type="date" class="form-control" id="data_exigencia">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Responsável pela solução</label>
+            <select class="form-select" id="responsavel_solucao_id">
+              <option value="">-</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Documento necessário</label>
+            <input type="text" class="form-control" id="documento_necessario">
+          </div>
+          <div class="col-12">
+            <label class="form-label">Descrição</label>
+            <textarea class="form-control" id="descricao" rows="3" required></textarea>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Data de envio da solução</label>
+            <input type="date" class="form-control" id="data_envio_solucao">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Novo prazo</label>
+            <input type="date" class="form-control" id="novo_prazo">
+          </div>
+          <div class="col-md-4 d-flex align-items-end">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="cumprida">
+              <label class="form-check-label" for="cumprida">Cumprida</label>
+            </div>
+          </div>
+        </div>
+        <div class="mt-3">
+          <button type="submit" class="btn btn-primary" id="btnSalvar">Salvar</button>
+          <a href="#" class="btn btn-outline-secondary" id="btnCancelar">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/helpers.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/exigencia-form.js"></script>
+</body>
+</html>
