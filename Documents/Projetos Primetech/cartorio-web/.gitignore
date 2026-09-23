@@ -1,0 +1,5 @@
+# Ferramentas locais (VS Code, Codex CLI) — não fazem parte do site
+.vscode/
+.codex/
+node_modules/
+.DS_Store
