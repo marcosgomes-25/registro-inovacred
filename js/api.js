@@ -74,6 +74,7 @@ async function saveProcesso(p, userId) {
     numero_protocolo: p.numero_protocolo || null,
     cartorio_id: p.cartorio_id || null,
     matricula: p.matricula || null,
+    banco: p.banco || null,
     data_limite: p.data_limite || null,
     responsavel_acompanhamento_id: p.responsavel_acompanhamento_id || null,
     em_analise: !!p.em_analise,

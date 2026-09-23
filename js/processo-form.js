@@ -40,6 +40,7 @@ async function init() {
       document.getElementById("numero_protocolo").value = p.numero_protocolo || "";
       document.getElementById("cartorio_id").value = p.cartorio_id || "";
       document.getElementById("matricula").value = p.matricula || "";
+      document.getElementById("banco").value = p.banco || "";
       document.getElementById("data_limite").value = p.data_limite || "";
       document.getElementById("em_analise").checked = !!p.em_analise;
       document.getElementById("observacoes").value = p.observacoes || "";
@@ -72,6 +73,7 @@ document.getElementById("processoForm").addEventListener("submit", async (e) => 
     numero_protocolo: document.getElementById("numero_protocolo").value.trim(),
     cartorio_id: document.getElementById("cartorio_id").value || null,
     matricula: document.getElementById("matricula").value.trim(),
+    banco: document.getElementById("banco").value.trim(),
     data_limite: document.getElementById("data_limite").value || null,
     em_analise: document.getElementById("em_analise").checked,
     observacoes: document.getElementById("observacoes").value.trim(),

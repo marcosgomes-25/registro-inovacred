@@ -102,6 +102,7 @@ create table public.processos (
   numero_protocolo text,
   cartorio_id bigint references public.cartorios(id),
   matricula text,
+  banco text,
   data_limite date,
   responsavel_acompanhamento_id uuid references public.profiles(id),
 

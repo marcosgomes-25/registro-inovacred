@@ -84,6 +84,7 @@ function render() {
       </td>
       <td>${escapeHtml(p.tipo)}</td>
       <td>${cartorio ? escapeHtml(cartorio.nome) : "-"}</td>
+      <td>${p.banco || "-"}</td>
       <td>${p.matricula || "-"}</td>
       <td>${responsavel ? escapeHtml(responsavel.nome) : "-"}</td>
       <td>${

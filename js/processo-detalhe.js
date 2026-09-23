@@ -41,6 +41,7 @@ function render() {
     <dt class="col-sm-5">Nº do protocolo/prenotação</dt><dd class="col-sm-7">${p.numero_protocolo || "-"}</dd>
     <dt class="col-sm-5">Cartório</dt><dd class="col-sm-7">${cartorio ? escapeHtml(cartorio.nome) : "-"}</dd>
     <dt class="col-sm-5">Matrícula</dt><dd class="col-sm-7">${p.matricula || "-"}</dd>
+    <dt class="col-sm-5">Banco</dt><dd class="col-sm-7">${p.banco || "-"}</dd>
     <dt class="col-sm-5">Data limite / próximo prazo</dt><dd class="col-sm-7">${formatDate(p.data_limite)}</dd>
     <dt class="col-sm-5">Responsável pelo acompanhamento</dt><dd class="col-sm-7">${responsavel ? escapeHtml(responsavel.nome) : "-"}</dd>
     <dt class="col-sm-5">Em análise</dt><dd class="col-sm-7">${p.em_analise ? '<span class="badge text-bg-info">Sim</span>' : "Não"}</dd>
